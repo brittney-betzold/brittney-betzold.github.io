@@ -22,14 +22,56 @@
     
     <section id="dashboard">
         <!-- Dashboard summary (income, expenses, savings) -->
-         <!-- <h2>Dashboard Summary:</h2>
-         <h3>Income:</h3>
-         <h3>Expenses:</h3>
-         <h3>Savings:</h3> -->
+         <h2>Dashboard Summary:</h2>
+         <h3>Total Income:</h3>
+         <h3>Total Expenses:</h3>
+         <h3>Savings:</h3>
+         <h3>Remaining Budget </h3>
     </section>
 
     <section id="expense-tracker">
         <!-- Expense/income form -->
+         <form id = "expense-form">
+            <table id = "tabletracker">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        
+                        <td data-label = "Date">
+                            <!-- <label for="date">Date</label> -->
+                            <input type="date" name="date" required>
+                        </td>
+                        
+                        <td data-label = "Amount">
+                        
+                            <input type="number" name="amount" placeholder="$0.00" step ="0.01" required></td>
+                        <td data-label = "Category">
+                            
+                            <select name = "category" required>
+                                <option value = "groceries">Groceries</option>
+                                <option value = "rent">Rent</option>
+                                <option value = "utilities">Utilities</option>
+                                <option value = "entertainment">Entertainment</option>
+                            </select>
+                        </td>
+                        <td data-label = "Description">
+                            
+                            <input type = "text" name = "description" placeholder = "Description">
+                        </td>
+
+                    </tr>
+                </tbody>
+           
+            </table>
+            <button type = "submit"> Add Expenses</button>
+         </form>
     </section>
 
     <section id="transaction-history">

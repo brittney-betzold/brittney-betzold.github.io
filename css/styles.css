@@ -16,42 +16,110 @@ header {
 #dashboard {
     margin: 20px;
 }
+
 nav{
-    background-color: #3e9b3e; /* Background color */
-    padding: 10px 0; /* Top and bottom padding */
+    background-color: #3e9b3e;
+    padding: 10px 0; 
+    
 }
 nav ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Align items horizontally */
-    justify-content: center; /* Center items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 nav ul li {
-    margin: 0 15px; /* Space between items */
+    margin: 0 15px; 
 }
 
 nav ul li a {
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make text bold */
-    padding: 4px 10px; /* Add padding around links */
-    transition: background-color 0.3s; /* Smooth transition for background */
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    padding: 4px 10px; 
+    transition: background-color 0.3s; 
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Add background on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+#tabletracker {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+   
+}
+
+#tabletracker th, #tabletracker td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabletracker th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-direction: column; 
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin for vertical alignment */
+        margin: 5px 0; 
+    }
+
+    #tabletracker, #tabletracker thead, #tabletracker tbody, #tabletracker th, #tabletracker td, #tabletracker tr{
+        display:block;
+        width:95%;
+        padding:10px;
+
+    }
+    
+    #tabletracker thead {
+        display:none;
+    }
+
+    #tabletracker tr {
+        margin-bottom: 10px;
+        border: 1px solid #837e7e;
+
+    }
+
+    #tabletracker td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        position: relative;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        
+    }
+    #tabletracker td:before{
+        content: attr(data-label);
+        align-content: left;
+        font-weight: bold;
+        
     }
 }
